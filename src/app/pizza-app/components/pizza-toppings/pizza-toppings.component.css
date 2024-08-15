@@ -1,0 +1,116 @@
+.pizza-toppings {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.pizza-topping {
+  margin: 20px 0 0;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 10px 15px 10px 53px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  flex-basis: 24%;
+  flex-shrink: 1;
+  user-select: none;
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  input {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  :is(--focused) {
+    background: rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+  }
+
+  :is(--active) {
+    background: #1a98e1;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  :is(--extra) {
+    .pizza-topping__extra {
+      transform: rotate(90deg) translate3d(0, 0, 0);
+    }
+  }
+
+  :is(__extra) {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    display: block;
+    text-transform: uppercase;
+    width: 50px;
+    font-size: 12px;
+    position: absolute;
+    right: -15px;
+    top: 11px;
+    padding: 2px 0px;
+    text-align: center;
+    transform: rotate(90deg) translate3d(0, -20px, 0);
+    transition: transform 0.1s linear;
+  }
+
+  :is(__icon) {
+    background: darken(#f3f3f3, 5%) no-repeat center center;
+    background-size: 30px;
+    width: 40px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    :is(--anchovy) {
+      background-image: url(toppings/anchovy.svg);
+    }
+    :is(--bacon) {
+      background-image: url(toppings/bacon.svg);
+    }
+    :is(--basil) {
+      background-image: url(toppings/basil.svg);
+    }
+    :is(--chili) {
+      background-image: url(toppings/chili.svg);
+    }
+    :is(--mozzarella) {
+      background-image: url(toppings/mozzarella.svg);
+    }
+    :is(--mushroom) {
+      background-image: url(toppings/mushroom.svg);
+    }
+    :is(--olive) {
+      background-image: url(toppings/olive.svg);
+    }
+    :is(--onion) {
+      background-image: url(toppings/onion.svg);
+    }
+    :is(--pepper) {
+      background-image: url(toppings/pepper.svg);
+    }
+    :is(--pepperoni) {
+      background-image: url(toppings/pepperoni.svg);
+    }
+    :is(--sweetcorn) {
+      background-image: url(toppings/sweetcorn.svg);
+    }
+    :is(--tomato) {
+      background-image: url(toppings/tomato.svg);
+    }
+  }
+}

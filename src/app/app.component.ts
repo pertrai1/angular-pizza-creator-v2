@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
+import { PizzaAppComponent } from './pizza-app/pizza-app.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [PizzaAppComponent, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
-export class AppComponent {
-  title = 'angular-pizza-creator-v2';
-}
+export class AppComponent {}
